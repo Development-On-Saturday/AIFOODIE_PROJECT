@@ -1,0 +1,382 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+  --color-light-red: #da6262;
+  --color-background-blue: #4f84db;
+  --color-background-red: #ad0101;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Animation  */
+  --animation-duration: 300ms;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0px;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0px;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0px;
+}
+
+/*  Section common  */
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* -------------------- Navbar -------------------- */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-background-red);
+  color: var(--color-white);
+  padding: 16px;
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold-bold);
+}
+
+.navbar__menu__item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
+
+.navbar__menu__item:hover {
+  background-color: var(--color-light-red);
+}
+
+.navbar__toggle-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
+/* -------------------- Home -------------------- */
+.home__background {
+  width: 100%;
+  height: 100%;
+}
+
+/* -------------------- About -------------------- */
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 8px;
+}
+
+.major {
+  margin: 4px;
+}
+
+.avatar__img {
+  width: 170px;
+  height: 170px;
+  border: 1.5px solid var(--color-light-red);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.avatar__img {
+  transition: all var(--animation-duration) ease;
+}
+
+.avatar__img:hover {
+  transform: scale(1.1);
+}
+
+.major__title,
+.major__descriptrion {
+  color: var(--color-dark-grey);
+}
+
+.major__descriptrion {
+  font-size: var(--font-small);
+}
+
+.record {
+  display: flex;
+  align-items: center;
+  margin: 8px 0px;
+}
+
+.record__description {
+  margin: 0 16px;
+  text-align: left;
+  color: var(--color-light-grey);
+  font-size: var(--font-regular);
+}
+
+/* -------------------- skill -------------------- */
+#skills {
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin: 20px 0px;
+}
+
+.skillset__title {
+  color: var(--color-white);
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 20px 40px;
+}
+
+.skill {
+  margin-bottom: 32px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+.skill__value {
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.tools {
+  background-color: var(--color-grey);
+}
+
+.tools {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.etc {
+  padding: 20px;
+}
+
+/* -------------------- Presentation -------------------- */
+
+.ppt {
+  margin: 20px 0px;
+}
+
+/* -------------------- Message -------------------- */
+#messages {
+  background-color: var(--color-light-white);
+}
+
+.messages {
+  margin: 40px;
+}
+
+.message {
+  display: flex;
+  margin: 32px 0px;
+}
+
+.message__avatar {
+  width: 150px;
+  height: 150px;
+  border: 1.5px solid var(--color-light-red);
+  margin: 12px;
+  border-radius: 50%;
+}
+
+.message__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.message__avatar:nth-child(even) {
+  margin-left: 40px;
+}
+
+.message__speech-bubble {
+  padding: 18px;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.message__speech-bubble p {
+  color: var(--color-light-grey);
+}
+
+.message__speech-bubble a {
+  color: var(--color-light-red);
+}
+
+/* -------------------- Contact -------------------- */
+#contact {
+  background-color: var(--color-background-red);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-light-white);
+}
+
+.contact__title {
+  margin: 32px 0px;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0px;
+}
+
+.contact__links i:hover {
+  transition: all var(--animation-duration) ease;
+  transform: scale(1.2);
+  color: var(--color-light-red);
+}
+
+/* ---------- For below 768px screen width ---------- */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+  }
+
+  .major {
+    margin-bottom: 36px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
+
+  .message__avatar {
+    width: 80px;
+    height: 80px;
+  }
+}
