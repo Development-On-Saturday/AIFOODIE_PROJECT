@@ -30,7 +30,11 @@ ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
-PROJECT_APPS = ["users.apps.UsersConfig", "foods.apps.FoodsConfig"]
+PROJECT_APPS = [
+    "users.apps.UsersConfig",
+    "foods.apps.FoodsConfig",
+    "core.apps.CoreConfig",
+]
 
 THIRD_PARTY_APPS = ["rest_framework"]
 
@@ -57,6 +61,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+# "django.middleware.clickjacking.XFrameOptionsMiddleware",
 
 ROOT_URLCONF = "config.urls"
 

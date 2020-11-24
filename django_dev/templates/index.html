@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +10,8 @@
   <meta name="author" content="Tay">
   <script src="https://kit.fontawesome.com/8cc10ba7fd.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="imgs/eiffel.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="{% static 'imgs/eiffel.png' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
@@ -40,7 +42,7 @@
 
 <!-- Home -->
   <section id="home">
-    <img src="imgs/home-background1.png" alt="Background" class=home__background>
+    <img src="{% static 'imgs/home-background1.png' %}" alt="Background" class=home__background>
   </section>
 
   <!-- About -->
@@ -51,7 +53,7 @@
     <div class="about__majors">
       <div class="major">
         <div class="major__avatar">
-          <img src="imgs/KIM.png" class="avatar__img">
+          <img src="{% static 'imgs/KIM.png' %}" class="avatar__img">
         </div>
         <h2 class="major__title">Yunkyung Kim</h2>
         <p class="major__description"> 
@@ -62,7 +64,7 @@
       
       <div class="major">
         <div class="major__avatar">
-          <img src="imgs/JUNG.png" class="avatar__img">
+          <img src="{% static 'imgs/JUNG.png' %}" class="avatar__img">
         </div>
         <h2 class="major__title">Minchae Jung</h2>
         <p class="major__description"> 
@@ -73,7 +75,7 @@
 
       <div class="major">
         <div class="major__avatar">
-          <img src="imgs/SHIN.png" class="avatar__img">
+          <img src="{% static 'imgs/SHIN.png' %}" class="avatar__img">
         </div>
         <h2 class="major__title">Taeyang Shin</h2>
         <p class="major__description"> 
@@ -84,7 +86,7 @@
 
       <div class="major">
         <div class="major__avatar">
-          <img src="imgs/LEE.png" class="avatar__img">
+          <img src="{% static 'imgs/LEE.png' %}" class="avatar__img">
         </div>
         <h2 class="major__title">Jaeho Lee</h2>
         <p class="major__description"> 
@@ -95,7 +97,7 @@
 
       <div class="major">
         <div class="major__avatar">
-          <img src="imgs/BYUN.png" class="avatar__img">
+          <img src="{% static 'imgs/BYUN.png' %}" class="avatar__img">
         </div>
         <h2 class="major__title">Hoyoon Byun</h2>
         <p class="major__description"> 
@@ -108,13 +110,13 @@
 
     <div class="about__record">
       <div class="record">
-        <img src="imgs/medal.png" alt="1st Hackathon" class="record__logo "width="40" height="40">
+        <img src="{% static 'imgs/medal.png' %}" alt="1st Hackathon" class="record__logo "width="40" height="40">
         <div class="record__description">
           AIFFEL first Hackathon 1st place
         </div>
       </div>
       <div class="record">
-        <img src="imgs/startup.png" alt="Batch 18th final" class="record__logo" width="40" height="40">
+        <img src="{ static 'imgs/startup.png'}" alt="Batch 18th final" class="record__logo" width="40" height="40">
         <div class="record__description">
           Startup Accelerator Primer Batch 18th final
         </div>
@@ -248,8 +250,11 @@
     <div class="section__container">
       <h1>Presentation</h1>
       <h2>TOPIC: FOOD Classification</h2>
-      <iframe class= "ppt" src="https://yonsei-my.sharepoint.com/personal/tyshin94_o365_yonsei_ac_kr/_layouts/15/Doc.aspx?sourcedoc={702b2034-44e3-4398-9c33-017cb0dac9c5}&amp;action=embedview&amp;wdAr=1.3333333333333333" width="100%" height="793px" frameborder="0">포함된 <a target="_blank" href="https://office.com">Microsoft Office</a> 프레젠테이션, 제공: <a target="_blank" href="https://office.com/webapps">Office</a>
-      </iframe>
+      <iframe class="ppt" src="https://onedrive.live.com/embed?cid=3D72AC0BD860DA71&amp;resid=3D72AC0BD860DA71%21387&amp;authkey=AOlK2rH_OrzKhrA&amp;em=2&amp;wdAr=1.7777777777777777" width="100%" height="793px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+      <!-- <iframe class= "ppt" src="{% static 'ppt.pptx' %}" width="100%" height="793px" frameborder="0">포함된 <a target="_blank" href="https://office.com">Microsoft Office</a> 프레젠테이션, 제공: <a target="_blank" href="https://office.com/webapps">Office</a>
+      </iframe> -->
+      <!-- <iframe class= "ppt" src="https://yonsei-my.sharepoint.com/personal/tyshin94_o365_yonsei_ac_kr/_layouts/15/Doc.aspx?sourcedoc={702b2034-44e3-4398-9c33-017cb0dac9c5}&amp;action=embedview&amp;wdAr=1.3333333333333333" width="100%" height="793px" frameborder="0">포함된 <a target="_blank" href="https://office.com">Microsoft Office</a> 프레젠테이션, 제공: <a target="_blank" href="https://office.com/webapps">Office</a>
+      </iframe> -->
     </div>  
   </seciton>
 
@@ -260,7 +265,7 @@
       <h3>See what they say about</h3>
       <div class="messages">
         <div class="message">
-          <img src="/imgs/KIM.png" alt="people" class="message__avatar">
+          <img src="{% static '/imgs/KIM.png' %}" alt="people" class="message__avatar">
           <div class="message__speech-bubble">
             <p>
               우리가 하고 싶은 말을 적어보쟈구 / 우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /
@@ -275,11 +280,11 @@
               우리가 하고 싶은 말을 적어보쟈구 / 우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /            </p>
             <p class="name"><a href="https://github.com/Jungminchae">Minchae Jung</a> / AIFFEL 1st</p>
           </div>
-          <img src="/imgs/JUNG.png" alt="people" class="message__avatar">
+          <img src="{% static '/imgs/JUNG.png' %}" alt="people" class="message__avatar">
         </div>
 
         <div class="message">
-          <img src="/imgs/SHIN.png" alt="people" class="message__avatar">
+          <img src="{% static '/imgs/SHIN.png' %}" alt="people" class="message__avatar">
           <div class="message__speech-bubble">
             <p>
               우리가 하고 싶은 말을 적어보쟈구 / 우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /            </p>
@@ -293,11 +298,11 @@
               우리가 하고 싶은 말을 적어보쟈구 / 우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /            </p>
             <p class="name"><a href="https://github.com/ljh415">Jaeho Lee</a> / AIFFEL 1st</p>
           </div>
-          <img src="/imgs/LEE.png" alt="people" class="message__avatar">
+          <img src="{% static '/imgs/LEE.png' %}" alt="people" class="message__avatar">
         </div>
 
         <div class="message">
-          <img src="/imgs/BYUN.png" alt="people" class="message__avatar">
+          <img src="{% /imgs/BYUN.png %}" alt="people" class="message__avatar">
           <div class="message__speech-bubble">
             <p>
               우리가 하고 싶은 말을 적어보쟈구 / 우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /            </p>
