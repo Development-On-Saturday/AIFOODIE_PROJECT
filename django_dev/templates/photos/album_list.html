@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    what?
+{% endblock %}
+    
+
+{% block extra-style %}
+<style>
+.thumbnail {
+    border: 3px solid #ccc;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+    
+    {% for item in object_list %}
+    
+    <div class="mt-5"> 
+        <a class="h2" href="{% url 'photos:album_detail' item.id %}">
+            {{ item.name }}
+        </a>&emsp;
+        <span class="font-italic h5">{{ item.description }}</span>
+    </div>
+
+    <hr style="margin: 0 0 20px 0;">
+
+    <div class="row">
+        
+        {% for photo in item.photo_set.all %}
+        <div class="ml-5">
+            <div class="thumbnail">
+                <a href="{{ photo.get_absolute_url }}">
+                    <img src="{{ photo.image.thumb_url }}" style="width: 100%;">
+                </a>
+            </div>
+        </div>            
+        {% endfor %}
+    </div>
+
+    {% endfor %}
+        
+{% endblock %}

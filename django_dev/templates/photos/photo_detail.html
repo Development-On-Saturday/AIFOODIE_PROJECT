@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    photo_detail
+{% endblock %}
+    
+{% block content %}
+    <h2 class="mt-5">{{ object.title }}</h2>
+    <div class="row">
+        <div class="col-md-9">
+            <a href="{{ object.image.url }}">
+                <img src="{{ object.image.url }}" style="width: 100%;">
+            </a>
+        </div>
+        <ul class="col-md-3 mt-3">
+            <li class="h5">Photo Description</li>
+                {% if object.description %}<p>{{ object.description|linebreaks }}</p>
+                {% else %}<p>(blank)</p>{% endif %}
+            <li class="h5">Date Uploaded</li>
+                <p class="font-italic">{{ object.upload_dt}}</p>
+            <li class="h5">Album Name</li>
+                <p class="font-italic">
+                    <a href="{% url 'photo:album_detail' object.album.id %}">{{ object.album.name }}</a>
+                </p>
+        </ul>
+    </div>
+{% endblock %}
