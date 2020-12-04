@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
-PROJECT_APPS = ["users.apps.UsersConfig", "foods.apps.FoodsConfig"]
+PROJECT_APPS = ["users.apps.UsersConfig", "foods.apps.FoodsConfig", "photos.apps.PhotosConfig"]
 
 THIRD_PARTY_APPS = ["rest_framework"]
 
