@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 {% load static %}
 
 {% block title %}
@@ -22,7 +22,7 @@
       </h1>        
       <h2>음식 이미지만 업로드 해주세요🍔🍕🍟🌭🍿</h2>
 
-      <form method="post" action="{% url 'foods:predictImage' %}" name="ImageUpload" enctype="multipart/form-data">
+      <form method="post" action="{% url 'foods:predictImage' %}" name="ImageUpload" enctype="multipart/form-data" >
         {% csrf_token %}
         <div class="avatar-upload">
               <div class="avatar-edit">
