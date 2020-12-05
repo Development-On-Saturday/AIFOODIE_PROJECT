@@ -37,12 +37,6 @@
   background-color: var(--color-light-white);
 }
 
-.container {
-  max-width: 960px;
-  margin: auto;
-  padding: 20px;
-}
-
 .avatar-upload {
   position: relative;
   max-width: 300px;
@@ -125,6 +119,39 @@
   background-color: var(--color-light-red);
 }
 
+.image__box {
+  max-width: 400px;
+  height: 400px;
+  margin: 50px auto;
+}
+
+.result__container {
+  background-color: var(--color-white);
+  max-width: 1600px;
+  margin: auto;
+  padding: 30px;
+}
+
+.models__images {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.model__image {
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+.result__description {
+  text-align: left;
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  padding-bottom: 20px;
+}
+
 /* ---------- For below 768px screen width ---------- */
 @media screen and (max-width: 768px) {
   :root {
@@ -134,5 +161,12 @@
     --font-regular: 16px;
     --font-small: 14px;
     --font-micro: 12px;
+  }
+
+  .model__image {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 }
