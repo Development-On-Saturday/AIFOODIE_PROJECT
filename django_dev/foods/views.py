@@ -7,7 +7,8 @@ from django.core.files.storage import FileSystemStorage
 from django.views.generic import TemplateView
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
-from .models import Food
+
+# from .models import Food
 
 
 label_info = {
@@ -54,14 +55,16 @@ def predictImage(request):
     filePathName = fs.save(fileObj.name, fileObj)
     filePathName = fs.url(filePathName)
     base_path = "./uploads/"
-    move_path = "./uploads/foods/"
+    # move_path = "./uploads/foods/"
     model = load_model("./models/new_model.h5")
 
-    if os.listdir(base_path)[0] == "foods":
-        media_file = os.listdir(base_path)[1]
-    else:
-        media_file = os.listdir(base_path)[0]
-    testimage = base_path + media_file
+    # if os.listdir(base_path)[0] == "foods":
+    #     media_file = os.listdir(base_path)[1]
+    # else:
+    #     media_file = os.listdir(base_path)[0]
+    base_name = os.path.basename(filePathName)
+
+    testimage = base_path + base_name
 
     food_image = Image.open(testimage)
     food_image = food_image.convert("RGB")
@@ -72,9 +75,12 @@ def predictImage(request):
     pred = model.predict(x)
     predictedLabel = label_info[str(np.argmax(pred[0]))]
 
-    shutil.move(testimage, move_path + media_file)
-    # context = {"filePathName": filePathName, "predictedLabel": predictedLabel}
-    # return render(request, "foods/classifier.html", context)
+    # shutil.move(testimage, move_path + media_file)
     print(predictedLabel)
-    return redirect(reverse("foods:classifier"))
+
+    context = {"filePathName": filePathName, "predictedLabel": predictedLabel}
+    return render(request, "foods/classifier_r.html", context)
+    # print(predictedLabel)
+
+    # return redirect(reverse("foods:classifier", kwargs={"filePathName":filePathName,"predictedLabel":predictedLabel }))
 
