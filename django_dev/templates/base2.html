@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <meta name="description" content="Tay's beta version Website Portfolio">
+  <meta name="author" content="Tay">
+  <script src="https://kit.fontawesome.com/8cc10ba7fd.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="icon" href="{% static 'imgs/ice.ico' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% block extra-style%}{% endblock %}
+  <script src="{% static 'javascripts/main.js' %}" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="navbar__logo">
+      <a href="{% url 'core:index' %}"><i class="fas fa-ice-cream"></i> AIFOODIE</a>
+    </div>
+      <ul class="navbar__menu">
+        <a href="{% url 'foods:classifier'%}"><li class="navbar__menu__item ">Classifier</li></a>
+      </ul>
+
+    <!-- Toggle button-->
+    <button class="navbar__toggle-btn">
+      <i class="fas fa-bars"></i>
+    </button>
+
+  </nav>
+
+{% block content %}
+
+{% endblock %}
+
+    <!-- Contact-->
+    <section id="contact" class="section">
+        <h1 class="contact__title">Contact</h1>
+        <h2 class="contact__email">https://github.com/Development-On-Saturday</h2>
+        <div class="contact__links">
+          <a href="https://github.com/Development-On-Saturday" target="_blank">
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
+        <p class="contact__rights">
+          Copyright ⓒ 2020 AIFFEL_FOODIE. All rights reserved.
+        </p>
+    </section>
+</body>
