@@ -1,4 +1,5 @@
 import shutil
+import json
 import os
 from PIL import Image
 import numpy as np
@@ -10,39 +11,11 @@ from tensorflow.keras.models import load_model
 
 # from .models import Food
 
+with open("./data/label_info.json", 'r') as f:
+    label_info = json.load(f)
 
-label_info = {
-    "0": "갈비구이",
-    "1": "갈비탕",
-    "2": "갈치구이",
-    "3": "갈치조림",
-    "4": "감자탕",
-    "5": "계란말이",
-    "6": "고추튀김",
-    "7": "곰탕_설렁탕",
-    "8": "곱창전골",
-    "9": "김밥",
-    "10": "김치볶음밥",
-    "11": "김치전",
-    "12": "김치찌개",
-    "13": "닭볶음탕",
-    "14": "된장찌개",
-    "15": "만두",
-    "16": "비빔밥",
-    "17": "삼겹살",
-    "18": "새우볶음밥",
-    "19": "생선전",
-    "20": "소세지볶음",
-    "21": "양념치킨",
-    "22": "육개장",
-    "23": "육회",
-    "24": "제육볶음",
-    "25": "짬뽕",
-    "26": "찜닭",
-    "27": "파전",
-    "28": "피자",
-    "29": "후라이드치킨",
-}
+with open("./data/aifoodie_hashtags_2.json", "r") as f:
+    hashtags = json.load(f)
 
 
 class ClassifierView(TemplateView):
@@ -73,12 +46,22 @@ def predictImage(request):
 
     x = food_image[np.newaxis, :, :, :]
     pred = model.predict(x)
-    predictedLabel = label_info[str(np.argmax(pred[0]))]
+    index = np.argmax(pred[0])
+    predictedLabel = label_info[str(index)]
 
     # shutil.move(testimage, move_path + media_file)
-    print(predictedLabel)
 
-    context = {"filePathName": filePathName, "predictedLabel": predictedLabel}
+    try:
+        if hashtags[str(index)]:
+            # 몇 개의 해시태그를 뽑을까?
+            num = np.random.randint(3, len(hashtags[str(index)]))
+            hashtag =np.random.choice(hashtags[str(index)], num, replace=False)
+            print(hashtag)
+    except IndexError:
+        pass 
+
+
+    context = {"filePathName": filePathName, "predictedLabel": predictedLabel, "hashtags" : hashtag}
     return render(request, "foods/classifier_r.html", context)
     # print(predictedLabel)
 

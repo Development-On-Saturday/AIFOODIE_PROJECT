@@ -11,7 +11,11 @@
 {% endblock %}
 
 {% block content %}
-
+<style>
+  .hashtag {
+    display: flex;
+  }
+</style>
 <section id="classifier" class="section">
     <div class="container">
       <h1>
@@ -21,6 +25,12 @@
 
       <div class="image__box">
           <img src="{{filePathName}}" width="100%" heigh="100%">
+      </div>
+
+      <div class="hashtag">
+        {% for h in hashtags %}
+          <h3>#{{h}} </h3>
+        {% endfor %}
       </div>
 
       <a href="{% url 'foods:classifier' %}"><button class="btn_upload">
