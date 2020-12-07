@@ -14,7 +14,7 @@ from tensorflow.keras.models import load_model
 with open("./data/label_info.json", 'r') as f:
     label_info = json.load(f)
 
-with open("./data/aifoodie_hashtags_2.json", "r") as f:
+with open("./data/aifoodie_hashtags.json", "r") as f:
     hashtags = json.load(f)
 
 
