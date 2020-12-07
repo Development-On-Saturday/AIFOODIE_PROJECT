@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ["*"]
 
 PROJECT_APPS = ["users.apps.UsersConfig", "foods.apps.FoodsConfig", "photos.apps.PhotosConfig"]
 
-THIRD_PARTY_APPS = ["rest_framework"]
 
 INSTALLED_APPS = (
     [
@@ -44,7 +43,6 @@ INSTALLED_APPS = (
         "django.contrib.staticfiles",
     ]
     + PROJECT_APPS
-    + THIRD_PARTY_APPS
 )
 
 
