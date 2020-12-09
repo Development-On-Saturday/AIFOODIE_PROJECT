@@ -153,16 +153,6 @@
   padding-bottom: 20px;
 }
 
-.hashtag {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.hashtag__color {
-  color: var(--color-hashtag);
-}
-
 /* ---------- For below 768px screen width ---------- */
 @media screen and (max-width: 768px) {
   :root {
