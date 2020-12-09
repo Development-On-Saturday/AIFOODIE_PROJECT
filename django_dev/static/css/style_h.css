@@ -1,0 +1,9 @@
+.hashtag {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hashtag__color {
+  color: var(--color-hashtag);
+}
