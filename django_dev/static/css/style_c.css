@@ -13,6 +13,7 @@
   --color-light-red: #da6262;
   --color-background-blue: #4f84db;
   --color-background-red: #ad0101;
+  --color-hashtag: #3f729b;
 
   /* Font size */
   --font-large: 48px;
@@ -150,6 +151,16 @@
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   padding-bottom: 20px;
+}
+
+.hashtag {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hashtag__color {
+  color: var(--color-hashtag);
 }
 
 /* ---------- For below 768px screen width ---------- */
