@@ -11,17 +11,13 @@
 {% endblock %}
 
 {% block content %}
-<style>
-  .hashtag {
-    display: flex;
-  }
-</style>
+
 <section id="classifier" class="section">
     <div class="container">
       <h1>
         </br>Let's Classify Food Image!
       </h1>        
-      <h2>{{predictedLabel}} 올리셨군요!!🍦</h2>
+      <h2>{{predictedLabel}} 올리셨군요!!😁</h2>
 
       <div class="image__box">
           <img src="{{filePathName}}" width="100%" heigh="100%">
@@ -29,7 +25,7 @@
 
       <div class="hashtag">
         {% for h in hashtags %}
-          <h3>#{{h}} </h3>
+          <h3 class="hashtag__color">#{{h}} </h3>
         {% endfor %}
       </div>
 
