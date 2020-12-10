@@ -6,8 +6,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}{% endblock %}</title>
-  <meta name="description" content="Tay's beta version Website Portfolio">
-  <meta name="author" content="Tay">
+  <meta property="og:title" content="AIFFEL Final Hackathon">
+  <meta property="og:description" content="Hackathon 2nd and 3rd will conduct food classification under the team name AI FOODIE. We will find and tune the classification model suitable for the food to find the highest recognition rate. In addition, we plan to create a classification model that best suits food.">
   <script src="https://kit.fontawesome.com/8cc10ba7fd.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -20,21 +20,21 @@
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d9b233b6fb70f3927bd1aa1ee26fdcb7&libraries=services,clusterer,drawing"></script>
   <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d9b233b6fb70f3927bd1aa1ee26fdcb7"></script> -->
 </head>
+
 <body>
   <!-- Navbar -->
   <nav id="navbar">
     <div class="navbar__logo">
-      <a href="{% url 'core:index' %}"><i class="fas fa-ice-cream"></i> AIFOODIE</a>
+      <a href="{% url 'core:index' %}" style=""><i class="fas fa-ice-cream"> </i> AIFOODIE</a>
     </div>
       <ul class="navbar__menu">
-        <a href="{% url 'foods:classifier'%}"><li class="navbar__menu__item ">Classifier</li></a>
+        <li class="navbar__menu__item "><a href="{% url 'foods:classifier'%}">Classifier</a></li>
         <li class="navbar__menu__item active" data-link="#home">Home</li>
         <li class="navbar__menu__item" data-link="#about">About</li>
         <li class="navbar__menu__item" data-link="#skills">Result</li>
         <li class="navbar__menu__item" data-link="#presentation">Presentation</li>
         <li class="navbar__menu__item" data-link="#messages">Message</li>
         <li class="navbar__menu__item" data-link="#contact">Contact</li>
-        <li class="navbar__menu__item" data-link="#">Sign in</li>
       </ul>
 
     <!-- Toggle button-->
@@ -48,20 +48,17 @@
 
 {% endblock %}
 
-    <!-- Contact-->
-    <section id="contact" class="section">
-        <h1 class="contact__title">Contact</h1>
-        <h2 class="contact__email">https://github.com/Development-On-Saturday</h2>
-        <div class="contact__links">
-          <a href="https://github.com/Development-On-Saturday" target="_blank">
-            <i class="fa fa-github"></i>
-          </a>
-        </div>
-        <p class="contact__rights">
-          Copyright ⓒ 2020 AIFFEL_FOODIE. All rights reserved.
-        </p>
-    </section>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/c998a172fe.js"></script>
+  <!-- Contact-->
+  <section id="contact" class="section">
+    <h1 class="contact__title">Contact</h1>
+    <h2 class="contact__email"><a href="https://github.com/Development-On-Saturday">https://github.com/Development-On-Saturday</a></h2>
+      <a href="https://github.com/Development-On-Saturday" target="_blank" class="contact__link">
+        <i class="fa fa-github"></i>
+      </a>
+    </div>
+    <p class="contact__rights">
+      Copyright ⓒ 2020 AIFFEL_FOODIE. All rights reserved.
+    </p>
+  </section>
+
 </body>
