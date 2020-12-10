@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 
 {% load static %}
@@ -7,7 +8,7 @@
 
 
 {% block content %}
-    
+
 <!-- Home -->
 <section id="home">
   <img src="{% static 'imgs/home-background1.png' %}" alt="Background" class=home__background>
@@ -301,42 +302,50 @@
       
     </div>
   </div>
-  <div id="map" style="width:500px;height:400px;"></div>
-    <script>
-      var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-          mapOption = { 
-              center: new kakao.maps.LatLng(37.49481861560641, 127.03620549826958), // 지도의 중심좌표
-              level: 3 // 지도의 확대 레벨
-          };
-      
-      var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-      
-      // 마커가 표시될 위치입니다 
-      var markerPosition  = new kakao.maps.LatLng(37.49481861560641, 127.03620549826958); 
-      
-      // 마커를 생성합니다
-      var marker = new kakao.maps.Marker({
-          position: markerPosition
-      });
-      
-      // 마커가 지도 위에 표시되도록 설정합니다
-      marker.setMap(map);
-      
-      // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-      // marker.setMap(null);
-      var iwContent = '<div>모두의 연구소!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-          iwPosition = new kakao.maps.LatLng(37.49481861560641, 127.03620549826958); //인포윈도우 표시 위치입니다
-
-      // 인포윈도우를 생성합니다
-      var infowindow = new kakao.maps.InfoWindow({
-          position : iwPosition, 
-          content : iwContent 
-      });
-        
-      // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
-      infowindow.open(map,marker);     
-      </script>
 </section>
 
+<!-- Map API-->
+<section class="section">
+  <h1>MODULAS_AIFFEL Gangnam Compus</h1>
+  <div id="map" style="width:80%; height:700px; margin:50px auto 100px; z-index: 0"></div>
+</section>
+  <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = { 
+            center: new kakao.maps.LatLng(37.49481861560641, 127.03620549826958), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+    
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    
+    // 마커가 표시될 위치입니다 
+    var markerPosition  = new kakao.maps.LatLng(37.49481861560641, 127.03620549826958); 
+    
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition
+    });
+    
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+    
+    // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+    // marker.setMap(null);
+    var iwContent = '<div>모두의 연구소!</div>', // 인포윈도우에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+        iwPosition = new kakao.maps.LatLng(37.49481861560641, 127.03620549826958); //인포윈도우 표시 위치입니다
 
+    // 인포윈도우를 생성합니다
+    var infowindow = new kakao.maps.InfoWindow({
+        position : iwPosition, 
+        content : iwContent 
+    });
+      
+    // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
+    infowindow.open(map,marker);     
+  </script>
+
+      <!-- Arrow up -->
+  <button class="arrow-up">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 {% endblock %}

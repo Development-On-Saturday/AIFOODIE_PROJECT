@@ -131,11 +131,17 @@ p {
 
 .navbar__menu {
   display: flex;
+  margin: 6px 0px;
 }
 
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold-bold);
+}
+
+.navbar__logo a {
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 .navbar__menu__item {
@@ -146,6 +152,11 @@ p {
 
   color: var(--color-white);
   border: 1px solid transparent;
+}
+
+.navbar__menu__item a {
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 .navbar__menu__item:hover {
@@ -377,6 +388,11 @@ p {
   margin: 32px 0px;
 }
 
+.contact__email a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
 .contact__link {
   font-size: var(--font-large);
   margin: 24px 0px;
@@ -422,7 +438,7 @@ p {
 
   .navbar__toggle-btn {
     display: block;
-    top: 8px;
+    top: 6px;
     right: 16px;
     font-size: var(--font-medium);
   }
