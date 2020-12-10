@@ -19,14 +19,13 @@
   <script src="{% static 'javascripts/main.js' %}" defer></script>
 </head>
 
-<body>
   <!-- Navbar -->
   <nav id="navbar">
     <div class="navbar__logo">
-      <a href="{% url 'core:index' %}"><i class="fas fa-ice-cream"></i> AIFOODIE</a>
+      <a href="{% url 'core:index' %}"><i class="fas fa-ice-cream"> </i> AIFOODIE</a>
     </div>
       <ul class="navbar__menu">
-        <a href="{% url 'foods:classifier'%}"><li class="navbar__menu__item ">Classifier</li></a>
+        <li class="navbar__menu__item "><a href="{% url 'foods:classifier'%}">Classifier</a></li>
       </ul>
 
     <!-- Toggle button-->
@@ -36,21 +35,23 @@
 
   </nav>
 
+
+
 {% block content %}
 
 {% endblock %}
 
-    <!-- Contact-->
-    <section id="contact" class="section">
-        <h1 class="contact__title">Contact</h1>
-        <h2 class="contact__email">https://github.com/Development-On-Saturday</h2>
-        <div class="contact__links">
-          <a href="https://github.com/Development-On-Saturday" target="_blank">
-            <i class="fa fa-github"></i>
-          </a>
-        </div>
-        <p class="contact__rights">
-          Copyright ⓒ 2020 AIFFEL_FOODIE. All rights reserved.
-        </p>
-    </section>
+
+  <!-- Contact-->
+  <section id="contact" class="section">
+    <h1 class="contact__title">Contact</h1>
+    <h2 class="contact__email"><a href="https://github.com/Development-On-Saturday">https://github.com/Development-On-Saturday</a></h2>
+      <a href="https://github.com/Development-On-Saturday" target="_blank" class="contact__link">
+        <i class="fa fa-github"></i>
+      </a>
+    </div>
+    <p class="contact__rights">
+      Copyright ⓒ 2020 AIFFEL_FOODIE. All rights reserved.
+    </p>
+  </section>
 </body>
