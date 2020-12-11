@@ -31,6 +31,10 @@
         {% endfor %}
       </div>
 
+      <a href="{% url 'foods:FoodPlaceSearch' %}"><button class="btn_upload">
+        🔎주변 맛집 보기
+      </button></a>
+
       <a href="{% url 'foods:classifier' %}"><button class="btn_upload">
         👋되돌아가기
       </button></a>

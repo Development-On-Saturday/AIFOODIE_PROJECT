@@ -1,5 +1,42 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block title %}
+    Search
+{% endblock %}
+    
+
+{% block extra-style %}
+<link rel="stylesheet" href="{% static 'css/style_c.css' %}">
+<script src="{% static 'javascripts/main_c.js' %}" defer></script>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Food Search Map -->
+
+<section id="classifier" class="section">
+    <div class="container">
+        <h1>
+        </br>Let's Search Food Place!
+        </h1>        
+        <h2>주변 음식점🍚</h2>
+
+        <div class="place">
+            <div id="map" style="width:80%; height:700px; margin:50px auto 100px; z-index: 0"></div>
+        </div>
+        
+        <a href="{% url 'foods:classifier' %}"><button class="btn_upload">
+            👋되돌아가기
+        </button></a>
+
+    </div>
+</section>
+
+<!-- Food Search Map -->
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=d9b233b6fb70f3927bd1aa1ee26fdcb7&libraries=services,clusterer,drawing"></script>
-<div id="map" style="width:100%;height:350px;"></div>
+
 
 <script>
     // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
@@ -54,4 +91,6 @@
             infowindow.open(map, marker);
         });
     }
-    </script>
+</script>
+
+{% endblock %}
