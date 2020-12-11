@@ -10,10 +10,10 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
 from .models import Food
 
-with open("./data/label_info.json", 'r', encoding="UTF8") as f:
+with open("./data/label_info.json", 'r', encoding="UTF-8-sig") as f:
     label_info = json.load(f)
 
-with open("./data/aifoodie_hashtags.json", "r", encoding="UTF8") as f:
+with open("./data/aifoodie_hashtags.json", "r", encoding="UTF-8-sig") as f:
     hashtags = json.load(f)
 
 class ClassifierView(TemplateView):
