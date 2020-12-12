@@ -108,6 +108,9 @@
     <p>
       In order to solve the food image classification problem, we fine-tune the parameters according to our dataset using a model pre-trained with the ImageNet dataset. At this time, the model trained the applications provided by keras with our dataset, evaluated the performance, and selected the optimal model. EifficientNet-B0 showed the highest performance for the dataset without augmentation applied. After that, the performance of the model was improved by applying learning strategies such as applying data augmentation to EifficientNet-B0 and adjusting the learning rate by cosine annealing.
     </p>
+    <a href="{% url 'photos:album_list' %}"><button class="btn__result">
+      Experiment Result Visualization
+    </button></a>
     <div class="skillset">
       <div class="skillset__left">
         <h3 class="skillset__title">Classification Models Validation Accuracy</h3>
