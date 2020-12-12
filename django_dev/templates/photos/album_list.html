@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 
 
 {% block title %}
@@ -16,29 +16,33 @@
 
 {% block content %}
     
+
     {% for item in object_list %}
-    
-    <div class="mt-5"> 
-        <a class="h2" href="{% url 'photos:album_detail' item.id %}">
-            {{ item.name }}
-        </a>&emsp;
-    </div>
+<section id="photo" class="section">
+    <div class="container">
 
-    <hr style="margin: 0 0 20px 0;">
+        <div class="mt-5"> 
+            <a class="h2" href="{% url 'photos:album_detail' item.id %}">
+                {{ item.name }}
+            </a>&emsp;
+        </div>
 
-    <div class="row">
-        
-        {% for photo in item.photo_set.all %}
-        <div class="ml-5">
-            <div class="thumbnail">
-                <a href="{{ photo.get_absolute_url }}">
-                    <img src="{{ photo.image.thumb_url }}" style="width: 100%;">
-                </a>
-            </div>
-        </div>            
+        <hr style="margin: 0 0 20px 0;">
+
+        <div class="row">
+            
+            {% for photo in item.photo_set.all %}
+            <div class="ml-5">
+                <div class="thumbnail">
+                    <a href="{{ photo.get_absolute_url }}">
+                        <img src="{{ photo.image.thumb_url }}" style="width: 100%;">
+                    </a>
+                </div>
+            </div>            
+            {% endfor %}
+        </div>
+
         {% endfor %}
     </div>
-
-    {% endfor %}
-        
+</section>
 {% endblock %}
