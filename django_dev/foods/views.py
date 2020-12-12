@@ -1,12 +1,11 @@
-import shutil
 import json
+import re
 import os
 from PIL import Image
 import numpy as np
-from django.shortcuts import reverse, redirect, render
+from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
 from django.views.generic import TemplateView
-from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
 from .models import Food
 
@@ -23,6 +22,13 @@ class ClassifierView(TemplateView):
 
 def predictImage(request):
     fileObj = request.FILES["filePath"]
+
+    # 한글 파일명 영어로 바꿔주기
+    if re.findall("[ㄱ-ㅎ가-힣]", fileObj.name) != []:
+        tail = os.path.splitext(fileObj.name)[1]
+        nums = np.random.randint(0, 9999999)
+        fileObj.name = "image_file_" + str(nums) + tail
+
     fs = FileSystemStorage()
     filePathName = fs.save(fileObj.name, fileObj)
     filePathName = fs.url(filePathName)
@@ -39,7 +45,7 @@ def predictImage(request):
     pred = model.predict(x)
     index = np.argmax(pred[0])
     predictedLabel = label_info[str(index)]
-    # shutil.move(testimage, move_path + media_file)
+
     try:
         if hashtags[str(index)]:
             # 몇 개의 해시태그를 뽑을까?
