@@ -1,17 +1,13 @@
 {% extends 'base.html' %}
-
+{% load static%}
 
 {% block title %}
-    whatahtaht
+    gallery
 {% endblock %}
 
 
 {% block extra-style %}
-<style>
-.thumbnail {
-    border: 5px solid #ccc;
-}        
-</style>
+<link rel="stylesheet" href="{% static 'css/style_a.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -20,11 +16,10 @@
     <div class="container">
 
         <div class="mt-5">
-            <span class="h2">{{ object.name }}</span>
-            <span class="h5 font-italic">{{ object.description }}</span>
+            <span class="h2"><h1>{{ object.name }}</h1></span>
         </div>
 
-        <hr style="margin: 0 0 20px 0;">
+        <hr style="margin: 0px 0px 30px; background-color: var(--color-background-red);">
 
         <div class="row">
             

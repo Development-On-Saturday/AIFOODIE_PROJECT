@@ -1,18 +1,22 @@
 {% extends 'base2.html' %}
 
+{% load static %}
 
 {% block title %}
-    photo_detail
+    gallery
 {% endblock %}
     
+{% block extra-style %}
+<link rel="stylesheet" href="{% static 'css/style_a.css' %}">
+{% endblock %}
+
 {% block content %}
 
 
 <section id="photo" class="section">
     <div class="container">
-        <br/>
-        <br/>
-        <h1>Photo datail description</h1>
+        &emsp;
+        <h1>Detailed description</h1>
         <h2 class="mt-5">{{ object.title }}</h2>
         <div class="row">
             <div class="col-md-9">
@@ -20,17 +24,13 @@
                     <img src="{{ object.image.url }}" style="width: 100%;">
                 </a>
             </div>
-            <ul class="col-md-3 mt-3">
-                <li class="h5">Photo Description</li>
-                    {% if object.description %}<p>{{ object.description|linebreaks }}</p>
-                    {% else %}<p>(blank)</p>{% endif %}
-                <li class="h5">Date Uploaded</li>
-                    <p class="font-italic">{{ object.upload_dt}}</p>
-                <li class="h5">Album Name</li>
-                    <p class="font-italic">
-                        <a href="{% url 'photo:album_detail' object.album.id %}">{{ object.album.name }}</a>
-                    </p>
-            </ul>
+            <div class="detail__description">
+                {% if object.description %}
+                <p>{{ object.description|linebreaks }}</p>
+                {% else %}
+                <p>(blank)</p>
+                {% endif %}
+            </div>
         </div>
     </div>
 </section>
