@@ -14,30 +14,21 @@
 
 <section id="photo" class="section">
     <div class="container">
-
-        <div class="mt-5">
-            <span class="h2"><h1>{{ object.name }}</h1></span>
-        </div>
-
+        &emsp;
+        <h1>{{ object.name }}</h1>
         <hr style="margin: 0px 0px 30px; background-color: var(--color-background-red);">
-
         <div class="row">
-            
             {% for photo in object.photo_set.all %}
             <div class="col-md-3 mb-5">
+                <h2>{{ photo.title }}</h2>
                 <div class="thumbnail">
                     <a href="{{ photo.get_absolute_url }}">
                         <img src=" {{ photo.image.thumb_url }}" style="width: 100%;">
                     </a>
                 </div>
-                <ul>
-                    <li class="font-italic">{{ photo.title }}</li>
-                    <li class="font-italic">{{ photo.upload_dt|date:"Y-m-d" }}</li>
-                </ul>
             </div>
             {% endfor %}
-                
-        </div>
+        </div>     
     </div>
 </section>s
 {% endblock %}
