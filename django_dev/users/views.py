@@ -3,10 +3,11 @@ from django.views.generic import FormView
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse_lazy
 from django.contrib import messages
+from .mixins import LoggedOutOnlyView
 from . import forms
 
 
-class LoginView(FormView):
+class LoginView(LoggedOutOnlyView, FormView):
 
     template_name = "users/login.html"
     form_class = forms.LoginForm
@@ -28,7 +29,7 @@ class LoginView(FormView):
             return reverse("core:index")
 
 
-class RegisterView(FormView):
+class RegisterView(LoggedOutOnlyView, FormView):
 
     template_name = "users/register.html"
     form_class = forms.RegisterForm
