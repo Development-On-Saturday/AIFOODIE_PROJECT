@@ -33,6 +33,8 @@ def predictImage(request):
     users = User.objects.get(pk=request.user.pk)
     # DB
     food = Food(name="", image=fileObj, user=users)
+    food.save()
+
     search = Food.objects.filter(user=users)[0].image
     model = load_model("./models/new_model.h5")
 
