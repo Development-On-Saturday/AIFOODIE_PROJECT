@@ -74,7 +74,6 @@ def FoodPlaceSearch(request):
 class HistoryView(ListView):
     model = Food
     template_name = "foods/history.html"
-    context_object_name = "history"
 
     def get_queryset(self):
         return Food.objects.filter(user=self.request.user).order_by("-created")
