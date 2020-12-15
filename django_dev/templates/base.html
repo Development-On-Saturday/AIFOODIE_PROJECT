@@ -25,20 +25,40 @@
 
 <body>
   <!-- Navbar -->
-  <nav id="navbar">
-    <div class="navbar__logo">
-      <a href="{% url 'core:index' %}"><i class="fas fa-ice-cream"> </i> AIFOODIE</a>
-    </div>
-      <ul class="navbar__menu">
-        <li class="navbar__menu__item "><a href="{% url 'foods:classifier'%}">Classifier</a></li>
-        <li class="navbar__menu__item active" data-link="#home">Home</li>
-        <li class="navbar__menu__item" data-link="#about">About</li>
-        <li class="navbar__menu__item" data-link="#skills">Result</li>
-        <li class="navbar__menu__item" data-link="#presentation">Presentation</li>
-        <li class="navbar__menu__item" data-link="#messages">Message</li>
-        <li class="navbar__menu__item" data-link="#modulabmap">Map</li>
-        <li class="navbar__menu__item" data-link="#contact">Contact</li>
-      </ul>
+  {% if user.is_authenticated %}
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <a href="{% url 'core:index' %}"><i class="fas fa-ice-cream"> </i> AIFOODIE</a>
+      </div>
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item "><a href="{% url 'foods:classifier'%}">Classifier</a></li>
+          <li class="navbar__menu__item active" data-link="#home">Home</li>
+          <li class="navbar__menu__item" data-link="#about">About</li>
+          <li class="navbar__menu__item" data-link="#skills">Result</li>
+          <li class="navbar__menu__item" data-link="#presentation">Presentation</li>
+          <li class="navbar__menu__item" data-link="#messages">Message</li>
+          <li class="navbar__menu__item" data-link="#modulabmap">Map</li>
+          <li class="navbar__menu__item" data-link="#contact">Contact</li>
+          <li class="navbar__menu__item"><a href="{% url 'users:logout' %}"></a>Logout</li>
+        </ul>
+  {% else %}
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <a href="{% url 'core:index' %}"><i class="fas fa-ice-cream"> </i> AIFOODIE</a>
+      </div>
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item "><a href="{% url 'foods:classifier'%}">Classifier</a></li>
+          <li class="navbar__menu__item active" data-link="#home">Home</li>
+          <li class="navbar__menu__item" data-link="#about">About</li>
+          <li class="navbar__menu__item" data-link="#skills">Result</li>
+          <li class="navbar__menu__item" data-link="#presentation">Presentation</li>
+          <li class="navbar__menu__item" data-link="#messages">Message</li>
+          <li class="navbar__menu__item" data-link="#modulabmap">Map</li>
+          <li class="navbar__menu__item" data-link="#contact">Contact</li>
+          <li class="navbar__menu__item"><a href="{% url 'users:login' %}"></a>Login</li>
+          <li class="navbar__menu__item"><a href="{% url 'users:register' %}"></a>SignUp</li>
+        </ul>
+    {% endif %}
 
     <!-- Toggle button-->
     <button class="navbar__toggle-btn">

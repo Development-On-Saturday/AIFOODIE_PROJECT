@@ -8,6 +8,7 @@ from django.views.generic import TemplateView, ListView
 from tensorflow.keras.models import load_model
 from .models import Food
 from users.models import User
+from users.mixins import LoggedInOnlyView
 
 with open("./data/label_info.json", "r", encoding="utf-8-sig") as f:
     label_info = json.load(f)
@@ -16,7 +17,7 @@ with open("./data/aifoodie_hashtags.json", "r", encoding="utf-8-sig") as f:
     hashtags = json.load(f)
 
 
-class ClassifierView(TemplateView):
+class ClassifierView(LoggedInOnlyView ,TemplateView):
     template_name = "foods/classifier.html"
 
 
@@ -71,7 +72,7 @@ def FoodPlaceSearch(request):
     context = {"search": search}
     return render(request, "foods/search_place.html", context)
 
-class HistoryView(ListView):
+class HistoryView(LoggedInOnlyView,ListView):
     model = Food
     template_name = "foods/history.html"
 

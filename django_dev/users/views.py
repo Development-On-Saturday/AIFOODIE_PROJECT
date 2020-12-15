@@ -1,7 +1,8 @@
-from django.shortcuts import reverse
+from django.shortcuts import reverse, redirect
 from django.views.generic import FormView
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse_lazy
+from django.contrib import messages
 from . import forms
 
 
@@ -41,3 +42,8 @@ class RegisterView(FormView):
         user = authenticate(self.request, email=email, password=password)
         print(user)
         return super().form_valid(form)
+
+def log_out(request):
+    messages.info(request, "See you later")
+    logout(request)
+    return redirect(reverse("core:index"))
