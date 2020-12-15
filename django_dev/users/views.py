@@ -24,14 +24,14 @@ class LoginView(FormView):
         if next_arg is not None:
             return next_arg
         else:
-            return reverse("core:home")
+            return reverse("core:index")
 
 
 class RegisterView(FormView):
 
     template_name = "users/register.html"
     form_class = forms.RegisterForm
-    success_url = reverse_lazy("core:home")
+    success_url = reverse_lazy("core:index")
 
     def form_valid(self, form):
         form.save()
@@ -40,5 +40,4 @@ class RegisterView(FormView):
         print(self.request)
         user = authenticate(self.request, email=email, password=password)
         print(user)
-        user.verify_email()
         return super().form_valid(form)
