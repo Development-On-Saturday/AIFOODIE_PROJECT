@@ -1,3 +1,29 @@
-{% for histroy in object_list %}
-    <img src="{{histroy.image.url}}" style="width: 100%;">
-{% endfor%}
+{% extends 'base2.html' %}
+
+{% load static %}
+
+{% block title %}
+    History
+{% endblock %}
+    
+
+{% block extra-style %}
+<link rel="stylesheet" href="{% static 'css/style_hi.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section id="history" class="section__history">
+    &emsp;
+    <h1>업로드한 음식 사진 히스토리📜</h1>
+    &emsp;
+    <div class="container__history">
+        {% for histroy in object_list %}
+        <div class="history__box">
+            <img src="{{histroy.image.url}}" class="history__image" style="width: 500px;">
+        </div>
+        {% endfor%}           
+    </div>
+</section>
+
+{% endblock %}

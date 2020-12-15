@@ -1,8 +1,9 @@
 {% extends 'base2.html' %}
+
 {% load static %}
 
 {% block title %}
-    gallery
+    Gallery
 {% endblock %}
     
 
@@ -17,7 +18,7 @@
 
     {% for item in object_list %}
         <div class="mt-5"> 
-            <a class="h2" href="{% url 'photos:album_detail' item.id %}">
+            <a class="h2" style="text-decoration: none" href="{% url 'photos:album_detail' item.id %}">
                 <h1 style="display: flex">{{ item.name }}</h1>
             </a>
         </div>
