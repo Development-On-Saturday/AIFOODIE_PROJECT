@@ -18,9 +18,13 @@
     <h1>업로드한 음식 사진 히스토리📜</h1>
     &emsp;
     <div class="container__history">
-        {% for histroy in object_list %}
+        {% for history in object_list %}
         <div class="history__box">
-            <img src="{{histroy.image.url}}" class="history__image" style="width: 500px;">
+            <img src="{{history.image.url}}" class="history__image" style="width: 500px;">
+            <div>
+                <h2>{{ history.name }}</h2>
+                <h3>{{ history.created }}</h3>
+            </div>
         </div>
         {% endfor%}           
     </div>
