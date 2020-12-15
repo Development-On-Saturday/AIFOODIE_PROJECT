@@ -39,7 +39,7 @@
           <li class="navbar__menu__item" data-link="#messages">Message</li>
           <li class="navbar__menu__item" data-link="#modulabmap">Map</li>
           <li class="navbar__menu__item" data-link="#contact">Contact</li>
-          <li class="navbar__menu__item"><a href="{% url 'users:logout' %}"></a>Logout</li>
+          <li class="navbar__menu__item"><a href="{% url 'users:logout' %}">Logout</a></li>
         </ul>
   {% else %}
     <nav id="navbar">
@@ -55,8 +55,8 @@
           <li class="navbar__menu__item" data-link="#messages">Message</li>
           <li class="navbar__menu__item" data-link="#modulabmap">Map</li>
           <li class="navbar__menu__item" data-link="#contact">Contact</li>
-          <li class="navbar__menu__item"><a href="{% url 'users:login' %}"></a>Login</li>
-          <li class="navbar__menu__item"><a href="{% url 'users:register' %}"></a>SignUp</li>
+          <li class="navbar__menu__item"><a href="{% url 'users:login' %}">Login</a></li>
+          <li class="navbar__menu__item"><a href="{% url 'users:register' %}">SignUp</a></li>
         </ul>
     {% endif %}
 
