@@ -1,0 +1,125 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+  --color-light-red: #da6262;
+  --color-background-blue: #4f84db;
+  --color-background-red: #ad0101;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Animation  */
+  --animation-duration: 300ms;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--color-light-white);
+}
+a {
+  color: var(--color-dark-grey);
+  text-decoration: none;
+}
+
+.box__name {
+  margin: 0px;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+}
+
+.login__head {
+  color: var(--color-background-red);
+  text-align: center;
+  font-size: 55px;
+}
+
+.inner_login {
+  position: relative;
+  margin-top: 150px;
+}
+.login_foodie {
+  position: relative;
+  width: 500px;
+  margin: auto;
+}
+.screen_out {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+.login_foodie .box_login {
+  margin: 0 0 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.inp_text {
+  margin: 20px;
+}
+
+.login_foodie .inp_text {
+  position: relative;
+  width: 100%;
+  margin: 0px;
+  padding: 18px 19px 19px;
+  box-sizing: border-box;
+}
+
+.login_foodie .inp_text + .inp_text {
+  border-top: 1px solid #ddd;
+}
+
+.inp_text input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  color: #000;
+  border: none;
+  outline: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+}
+
+.btn_login {
+  margin: 20px 0 0;
+  width: 100%;
+  height: 48px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: var(--weight-semi-bold);
+  color: #fff;
+  background-color: var(--color-background-red);
+  cursor: pointer;
+  border-color: var(--color-white);
+}
