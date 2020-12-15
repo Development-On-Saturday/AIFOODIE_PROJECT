@@ -32,6 +32,7 @@
       </div>
         <ul class="navbar__menu">
           <li class="navbar__menu__item "><a href="{% url 'foods:classifier'%}">Classifier</a></li>
+          <li class="navbar__menu__item "><a href="{% url 'foods:history' pk=user.pk %}">History</a></li>
           <li class="navbar__menu__item active" data-link="#home">Home</li>
           <li class="navbar__menu__item" data-link="#about">About</li>
           <li class="navbar__menu__item" data-link="#skills">Result</li>
