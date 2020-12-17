@@ -13,3 +13,14 @@
 .container__photo {
   margin: 0 50px;
 }
+
+.gan {
+}
+.gan__food {
+  display: flex;
+  justify-content: space-between;
+}
+.gan__gif {
+  width: 500px;
+  height: 500px;
+}

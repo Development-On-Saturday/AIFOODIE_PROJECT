@@ -28,7 +28,7 @@
         <div class="row">
             {% for photo in item.photo_set.all %}
             <div class="ml-5">
-                <div class="thumbnail">
+                <div class="thumbnail" style="margin: 0 auto 30px;">
                     <a href="{{ photo.get_absolute_url }}">
                         <img src="{{ photo.image.thumb_url }}" style="width: 100%;">
                     </a>
@@ -37,6 +37,83 @@
             {% endfor %}
         </div>
         {% endfor %}
+
+        <h1 style="display: flex">T-SNE Video</h1>
+        <hr style="margin: 0px 0px 30px; background-color: var(--color-background-red);">
+        <section class="album__video">
+            <video controls src="{% static 'video/t-sne.mp4' %}" width="90%" ></video>
+        </section>
+
+        &emsp;
+
+        <h1 style="display: flex">GAN GIF</h1>
+        <hr style="margin: 0px 0px 30px; background-color: var(--color-background-red);">
+        <section class="gan" 
+        style="
+            display: flex;
+            flex-wrap: wrap;
+            ">
+            
+            <div class="gan__food" style="margin-bottom: 30px;">
+                <h2 class="gan__title">비빔밥</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/Bibimbap.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin-bottom: 30px;">
+                <h2 class="gan__title">치킨</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/Chicken.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin-bottom: 30px;">
+                <h2 class="gan__title">갈비탕</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/galbitang.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin-bottom: 30px;">
+                <h2 class="gan__title">김밥</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/Kimbab.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin-bottom: 30px;">
+                <h2 class="gan__title">파전</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/Pajeon.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin-bottom: 30px;">
+                <h2 class="gan__title">피자</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/pizza.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin-bottom: 30px;">
+                <h2 class="gan__title">소세지볶음</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/sausage.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin-bottom: 30px;">
+                <h2 class="gan__title">육개장</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/Yukgaejang.gif' %}" style="width:280px">
+                </div>
+            </div>
+            
+
+
+        </section>
+
     </div>
 </section>
 {% endblock %}
