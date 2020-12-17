@@ -17,20 +17,19 @@
     <div class="container">
         &emsp;
         <h1>Detailed description</h1>
-        <h2 class="mt-5">{{ object.title }}</h2>
-        <div class="row">
-            <div class="col-md-9">
-                <a href="{{ object.image.url }}">
-                    <img src="{{ object.image.url }}" style="width: 100%;">
-                </a>
-            </div>
-            <div class="detail__description">
-                {% if object.description %}
-                <p>{{ object.description|linebreaks }}</p>
-                {% else %}
-                <p>(blank)</p>
-                {% endif %}
-            </div>
+        <h2>{{ object.title }}</h2>
+        <div class="object__image">
+            <a href="{{ object.image.url }}">
+                <img src="{{ object.image.url }}" style="width: 80%;">
+            </a>
+        </div>
+        &emsp;
+        <div class="object__description">
+            {% if object.description %}
+            <p>{{ object.description|linebreaks }}<p>
+            {% else %}
+            <p>(blank)</p>
+            {% endif %}
         </div>
     </div>
 </section>
