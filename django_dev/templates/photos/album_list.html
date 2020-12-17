@@ -28,7 +28,7 @@
         <div class="row">
             {% for photo in item.photo_set.all %}
             <div class="ml-5">
-                <div class="thumbnail" style="margin: 0 auto 30px;">
+                <div class="thumbnail" style="margin: 0 40px 50px;">
                     <a href="{{ photo.get_absolute_url }}">
                         <img src="{{ photo.image.thumb_url }}" style="width: 100%;">
                     </a>
