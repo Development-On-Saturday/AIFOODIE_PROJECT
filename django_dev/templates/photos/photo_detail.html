@@ -1,0 +1,37 @@
+{% extends 'base2.html' %}
+
+{% load static %}
+
+{% block title %}
+    Gallery
+{% endblock %}
+    
+{% block extra-style %}
+<link rel="stylesheet" href="{% static 'css/style_a.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+<section id="photo" class="section">
+    <div class="container">
+        &emsp;
+        <h1>Detailed description</h1>
+        <h2>{{ object.title }}</h2>
+        <div class="object__image">
+            <a href="{{ object.image.url }}">
+                <img src="{{ object.image.url }}" style="width: 80%;">
+            </a>
+        </div>
+        &emsp;
+        <div class="object__description">
+            {% if object.description %}
+            <p>{{ object.description|linebreaks }}<p>
+            {% else %}
+            <p>(blank)</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

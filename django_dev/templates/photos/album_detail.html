@@ -1,0 +1,35 @@
+{% extends 'base2.html' %}
+
+{% load static%}
+
+{% block title %}
+    Gallery
+{% endblock %}
+
+
+{% block extra-style %}
+<link rel="stylesheet" href="{% static 'css/style_a.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<section id="photo" class="section">
+    <div class="container">
+        &emsp;
+        <h1>{{ object.name }}</h1>
+        <hr style="margin: 0px 0px 30px; background-color: var(--color-background-red);">
+        <div class="row">
+            {% for photo in object.photo_set.all %}
+            <div class="col-md-3 mb-5">
+                <h2>{{ photo.title }}</h2>
+                <div class="thumbnail">
+                    <a href="{{ photo.get_absolute_url }}">
+                        <img src=" {{ photo.image.thumb_url }}" style="width: 100%;">
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>     
+    </div>
+</section>
+{% endblock %}

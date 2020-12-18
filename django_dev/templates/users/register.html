@@ -1,0 +1,48 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFOODIE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{% static 'imgs/ice.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/style_r.css' %}">
+</head>
+<body>
+    <div class="inner_login">
+        <div class="login_foodie">
+            <form method="post" id="authForm">
+                {% csrf_token %}
+                <a href="{% url 'core:index' %}"><h1 class="login__head">AIFOODIE</h1></a>
+                
+                <h3 class="box__name">이메일</h3>
+                <div class="box_login">
+                    <div class="inp_text">
+                        {{ form.email }}
+                    </div>
+                </div>
+
+                <h3 class="box__name">비밀번호</h3>
+                <div class="box_login">
+                    <div class="inp_text">
+                        {{ form.password }}
+                    </div>
+                </div>
+
+                <h3 class="box__name">비밀번호 재확인</h3>
+                <div class="box_login">
+                    <div class="inp_text">
+                        {{ form.confirm_password }}
+                    </div>
+                </div>
+
+                <button class="btn_login">가입하기</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

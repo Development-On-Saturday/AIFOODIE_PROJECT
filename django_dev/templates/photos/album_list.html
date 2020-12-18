@@ -1,0 +1,119 @@
+{% extends 'base2.html' %}
+
+{% load static %}
+
+{% block title %}
+    Gallery
+{% endblock %}
+    
+
+{% block extra-style %}
+<link rel="stylesheet" href="{% static 'css/style_a.css' %}">
+{% endblock %}
+
+{% block content %}
+    
+<section id="photo" class="section__photo">
+    <div class="container__photo">
+
+    {% for item in object_list %}
+        <div class="mt-5"> 
+            <a class="h2" style="text-decoration: none" href="{% url 'photos:album_detail' item.id %}">
+                <h1 style="display: flex">{{ item.name }}</h1>
+            </a>
+        </div>
+
+        <hr style="margin: 0px 0px 30px; background-color: var(--color-background-red);">
+
+        <div class="row">
+            {% for photo in item.photo_set.all %}
+            <div class="ml-5">
+                <div class="thumbnail" style="margin: 0 40px 50px;">
+                    <a href="{{ photo.get_absolute_url }}">
+                        <img src="{{ photo.image.thumb_url }}" style="width: 100%;">
+                    </a>
+                </div>
+            </div>            
+            {% endfor %}
+        </div>
+        {% endfor %}
+
+        <h1 style="display: flex">T-SNE Video</h1>
+        <hr style="margin: 0px 0px 30px; background-color: var(--color-background-red);">
+        <section class="album__video">
+            <video controls src="{% static 'video/t-sne.mp4' %}" width="90%" ></video>
+        </section>
+
+        &emsp;
+
+        <h1 style="display: flex">GAN GIF</h1>
+        <hr style="margin: 0px 0px 30px; background-color: var(--color-background-red);">
+        <section class="gan" 
+        style="
+        display: flex;
+        flex-wrap: wrap;
+        ">
+            
+            <div class="gan__food" style="margin: 0 30px 30px;">
+                <h2 class="gan__title">비빔밥</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/Bibimbap.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin: 0 30px 30px;">
+                <h2 class="gan__title">치킨</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/Chicken.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin: 0 30px 30px;">
+                <h2 class="gan__title">갈비탕</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/galbitang.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin: 0 30px 30px;">
+                <h2 class="gan__title">파전</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/Pajeon.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin: 0 30px 30px;">
+                <h2 class="gan__title">피자</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/pizza.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin: 0 30px 30px;">
+                <h2 class="gan__title">소세지볶음</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/sausage.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin: 0 30px 30px;">
+                <h2 class="gan__title">육개장</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/Yukgaejang.gif' %}" style="width:280px">
+                </div>
+            </div>
+
+            <div class="gan__food" style="margin: 0 30px 30px;">
+                <h2 class="gan__title">김밥</h2>
+                <div class="gan__gif">
+                    <img src="{% static 'gif/Kimbab.gif' %}" style="width:280px">
+                </div>
+            </div>
+            
+
+
+        </section>
+
+    </div>
+</section>
+{% endblock %}

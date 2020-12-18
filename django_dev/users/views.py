@@ -1,11 +1,13 @@
-from django.shortcuts import reverse
+from django.shortcuts import reverse, redirect
 from django.views.generic import FormView
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse_lazy
+from django.contrib import messages
+from .mixins import LoggedOutOnlyView
 from . import forms
 
 
-class LoginView(FormView):
+class LoginView(LoggedOutOnlyView, FormView):
 
     template_name = "users/login.html"
     form_class = forms.LoginForm
@@ -24,14 +26,14 @@ class LoginView(FormView):
         if next_arg is not None:
             return next_arg
         else:
-            return reverse("core:home")
+            return reverse("core:index")
 
 
-class RegisterView(FormView):
+class RegisterView(LoggedOutOnlyView, FormView):
 
     template_name = "users/register.html"
     form_class = forms.RegisterForm
-    success_url = reverse_lazy("core:home")
+    success_url = reverse_lazy("core:index")
 
     def form_valid(self, form):
         form.save()
@@ -40,5 +42,9 @@ class RegisterView(FormView):
         print(self.request)
         user = authenticate(self.request, email=email, password=password)
         print(user)
-        user.verify_email()
         return super().form_valid(form)
+
+def log_out(request):
+    messages.info(request, "See you later")
+    logout(request)
+    return redirect(reverse("core:index"))

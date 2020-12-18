@@ -1,331 +1,374 @@
+
+{% extends 'base.html' %}
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIFFEL_Hackathon Portfolio</title>
-  <meta name="description" content="Tay's beta version Website Portfolio">
-  <meta name="author" content="Tay">
-  <script src="https://kit.fontawesome.com/8cc10ba7fd.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="{% static 'imgs/eiffel.png' %}">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
 
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="navbar__logo">
-      <a href="#"><i class="fas fa-ice-cream"></i> AIFOODIE</a>
-    </div>
-    <div class="navbar__menu">
-      <ul class="navbar__menu">
-        <li class="navbar__menu__item active">Classifier</li>
-        <li class="navbar__menu__item">About</li>
-        <li class="navbar__menu__item">Skills</li>
-        <li class="navbar__menu__item">Presentation</li>
-        <li class="navbar__menu__item">Message</li>
-        <li class="navbar__menu__item">Contact</li>
-        <li class="navbar__menu__item">Sign in</li>
-      </ul>
-    </div>
-
-    <!-- Toggle button-->
-    <button class="navbar__toggle-btn">
-      <i class="fas fa-bars"></i>
-    </button>
+{% block title %}AIFOODIE{% endblock %}
 
 
-  </nav>
+{% block content %}
 
 <!-- Home -->
-  <section id="home">
-    <img src="{% static 'imgs/home-background1.png' %}" alt="Background" class=home__background>
-  </section>
+<section id="home">
+  <img src="{% static 'imgs/home-background1.png' %}" alt="Background" class=home__background>
+</section>
 
-  <!-- About -->
-  <section id="about" class="section section__container" >
-    <h1>About AIFOODIE Team</h1>
-    <p> We met at AIFFEL, an artificial intelligence innovation school. AIFFEL is an educational institution where students learn artificial intelligence and coexist with each other. Our team won first place in the 1st Hackathon hosted by AIFFEL. we have dreamed of becoming a startup by supporting 18 primer batches. Hackathon 2nd and 3rd will conduct food classification under the team name AI FOODIE. We will find and tune the classification model suitable for the food to find the highest recognition rate. In addition, we plan to create a classification model that best suits food.
+<!-- About -->
+<section id="about" class="section section__container" >
+  <h1>About AIFOODIE Team</h1>
+  <p> We met at AIFFEL, an artificial intelligence innovation school. AIFFEL is an educational institution where students learn artificial intelligence and coexist with each other. Our team won first place in the 1st Hackathon hosted by AIFFEL. we have dreamed of becoming a startup by supporting 18 primer batches. Hackathon 2nd and 3rd will conduct food classification under the team name AI FOODIE. We will find and tune the classification model suitable for the food to find the highest recognition rate. In addition, we plan to create a classification model that best suits food.
+  </p>
+  <div class="about__majors">
+    <div class="major">
+      <div class="major__avatar">
+        <a href="https://github.com/YesicaKim" target="_blank"><img src="{% static 'imgs/KIM.png' %}" class="avatar__img"></a>
+      </div>
+      <h2 class="major__title">Yoonkyung <br/>Kim</h2>
+      <p class="major__description"> 
+        #컴공전공_마케팅_고수 
+        <br/>#마케팅을_사랑하는😍
+        <br/>#빅데이터와_AI_매력에_푹_빠진🏄‍♀
+      </p>
+    </div>
+
+    <div class="major">
+      <div class="major__avatar">
+        <a href="https://github.com/Jungminchae" target="_blank"><img src="{% static 'imgs/JUNG.png' %}" class="avatar__img"></a>
+      </div>
+      <h2 class="major__title">Minchae <br/>Jung</h2>
+      <p class="major__description"> 
+        #신입헬창_개발자 
+        <br/>#3대500_치고파🏋🏿
+        <br/>#코딩은_체력빨
+        <br/>#AI서비스_만들고싶다아아
+      </p>
+    </div>
+
+    <div class="major">
+      <div class="major__avatar">
+        <a href="https://github.com/tyshin94" target="_blank"><img src="{% static 'imgs/SHIN.png' %}" class="avatar__img"></a>
+      </div>
+      <h2 class="major__title">Taeyang <br/>Shin</h2>
+      <p class="major__description"> 
+        #Marketer?
+        <br />#AI Researcher? 
+        <br />#Front_End Developer?
+        <br />#햄버거_최고!!🍔
+      </p>
+    </div>
+
+    <div class="major">
+      <div class="major__avatar">
+        <a href="https://github.com/ljh415" target="_blank"><img src="{% static 'imgs/LEE.png' %}" class="avatar__img"></a>
+      </div>
+      <h2 class="major__title">Jaeho <br/>Lee</h2>
+      <p class="major__description"> 
+        #AI없인_못살아☠️
+        <br/>#방구석_코딩덕후👨‍💻
+        <br/>#장비충은_아닌데💻🖱️⌨️
+      </p>
+    </div>
+
+    <div class="major">
+      <div class="major__avatar">
+        <a href="https://github.com/hybyun0121" target="_blank"><img src="{% static 'imgs/test.png' %}" class="avatar__img"></a>
+      </div>
+      <h2 class="major__title">Hoyoon <br/>Byun</h2>
+      <p class="major__description"> 
+        #딥러닝_기술덕후_DeepDog🐶
+        <br/>#딥러닝_도깨비_방망이_대장장이👹
+        <br/>#치킨을_사랑하는_치킨의_민족🍗
+      </p>
+    </div>
+
+  </div>
+
+  <div class="about__record">
+    <div class="record">
+      <img src="{% static 'imgs/medal.png' %}" alt="1st Hackathon" class="record__logo "width="40" height="40">
+      <div class="record__description">
+        AIFFEL first Hackathon 1st place
+      </div>
+    </div>
+    <div class="record">
+      <img src="{% static 'imgs/startup.png' %}" alt="Batch 18th final" class="record__logo" width="40" height="40">
+      <div class="record__description">
+        Startup Accelerator Primer Batch 18th final
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+  <div class="section__container">
+    <h1>Result</h1>
+    <h2>Experiments & Skills</h2>
+    <p>
+      In order to solve the food image classification problem, we fine-tune the parameters according to our dataset using a model pre-trained with the ImageNet dataset. At this time, the model trained the applications provided by keras with our dataset, evaluated the performance, and selected the optimal model. EifficientNet-B0 showed the highest performance for the dataset without augmentation applied. After that, the performance of the model was improved by applying learning strategies such as applying data augmentation to EifficientNet-B0 and adjusting the learning rate by cosine annealing.
     </p>
-    <div class="about__majors">
-      <div class="major">
-        <div class="major__avatar">
-          <img src="{% static 'imgs/KIM.png' %}" class="avatar__img">
+    <a href="{% url 'photos:album_list' %}"><button class="btn__result">
+      Experiment Result Visualization
+    </button></a>
+    <div class="skillset">
+      <div class="skillset__left">
+        <h3 class="skillset__title">Classification Models Validation Accuracy</h3>
+        
+        <div class="skill">
+          <div class="skill__description">
+            <span>Xception</span>
+            <span>99.54%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value" style="width: 99.54%"></div>
+          </div>
         </div>
-        <h2 class="major__title">Yunkyung Kim</h2>
-        <p class="major__description"> 
-          윤경님의 기술 스택 적기 또는 역할 등등
-          <br /> 기이수울, 스으태액
-        </p>
+
+        <div class="skill">
+          <div class="skill__description">
+            <span>EfficientNet</span>
+            <span>98.81%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value" style="width: 98.81%"></div>
+          </div>
+        </div>
+      
+        <div class="skill">
+          <div class="skill__description">
+            <span>Inception</span>
+            <span>98.49%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value" style="width: 98.49%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill__description">
+            <span>ResNet</span>
+            <span>98.38%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value" style="width: 98.38%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill__description">
+            <span>DenseNet</span>
+            <span>95.08%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value" style="width: 95.08%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill__description">
+            <span>MobileNet</span>
+            <span>63.05%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value" style="width: 63.05%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="skill__description">
+            <span>NASNet</span>
+            <span>15.81%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value" style="width: 15.81%"></div>
+          </div>
+        </div>
+        
+        <div class="skill">
+          <div class="skill__description">
+            <span>VGG</span>
+            <span>5.27%</span>
+          </div>
+          <div class="skill__bar">
+            <div class="skill__value" style="width: 5.27%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skillset__right">
+        <div class="tools">
+          <h3 class="skillset__title">Programming Language & Skills</h3>
+          <div class="teches">
+            <div class="tech"><img src="{% static 'logo/html.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/css.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/javascript.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/python.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/pillow.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/django.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/aws.jpg' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/google.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/tensorflow.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/opencv.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/numpy.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/pandas.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/scikit-learn.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/albumentation.png' %}" alt="" class="tech__logo"></div>
+            <div class="tech"><img src="{% static 'logo/keras.png' %}" alt="" class="tech__logo"></div>
+          </div>
+        </div>
+        
+        <div class="etc">
+          <h3 class="skillset__title">Etc</h3>
+          <div class="coworking">
+            <div class="cowork"><img src="{% static 'logo/git.png' %}" alt="" class="cowork__logo"></div>
+            <div class="cowork"><img src="{% static 'logo/github.png' %}" alt="" class="cowork__logo"></div>
+            <div class="cowork"><img src="{% static 'logo/notion.png' %}" alt="" class="cowork__logo"></div>
+            <div class="cowork"><img src="{% static 'logo/slack.png' %}" alt="" class="cowork__logo"></div>
+            <div class="cowork"><img src="{% static 'logo/colab.png' %}" alt="" class="cowork__logo"></div>
+            <div class="cowork"><img src="{% static 'logo/pycharm1.png' %}" alt="" class="cowork__logo"></div>
+            <div class="cowork"><img src="{% static 'logo/vscode.jpg' %}" alt="" class="cowork__logo"></div>
+            <div class="cowork"><img src="{% static 'logo/jupyter.png' %}" alt="" class="cowork__logo"></div>
+            <div class="cowork"><img src="{% static 'logo/meet.png' %}" alt="" class="cowork__logo"></div>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+</section>
+
+<!-- Presentation -->
+<seciton id="presentation" class="section">
+  <div class="section__container">
+    <h1>Presentation</h1>
+    <h2>TOPIC: FOOD Classification</h2>
+    <iframe src="https://onedrive.live.com/embed?cid=3D72AC0BD860DA71&amp;resid=3D72AC0BD860DA71%21393&amp;authkey=AAW-pszca5Ibma8&amp;em=2&amp;wdAr=1.7777777777777777" width="100%" height="793px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+  </div>  
+</seciton>
+
+<!-- Message-->
+<section id="messages" class="section">
+  <div class="section__container">
+    <h1>AIFOODIE Member Message</h1>
+    <h3>See what they say about</h3>
+    <div class="messages">
+      <div class="message">
+        <img src="{% static 'imgs/KIM_M.jpg' %}" alt="people" class="message__avatar">
+        <div class="message__speech-bubble">
+          <p>
+            저의 최근 관심사는 '수익 창출이 가능한 인공 지능(MAI: Monetizable Artificial Intelligence)' 입니다. 90년대 AI 암흑기 시절에 인공지능 석사를 전공할 때는 의구심을 잔뜩 품은 채, 지루한 학문으로 접근했던 것 같습니다. 다양한 산업군에서 마케팅을 경험하고 다시 인공지능으로 돌아와 보니, 딥러닝이 눈부신 발전을 이루어서 짜릿한 전율감을 느꼈습니다. 
+          </p>
+          <p>앞으로 소비자들의 일상을 변화시키고 따듯한 감동을 주는 '혁신적인 AI 서비스'를 개발하는 것이 제 꿈이 되었습니다. 그 과정 자체가 정말 즐겁고 행복한 여정이지 않을까요? 저와 같이 인공지능의 매력에 풍덩 빠져보시겠어요?
+          </p>
+          <p class="name"><a href="https://github.com/YesicaKim" target="_blank">Yoonkyung Kim</a> / AIFFEL 1st</p>
+        </div>
       </div>
       
-      <div class="major">
-        <div class="major__avatar">
-          <img src="{% static 'imgs/JUNG.png' %}" class="avatar__img">
+      <div class="message">
+        <div class="message__speech-bubble">
+          <p>
+            안녕하세요 정민채입니다. 저는 AI 서비스를 만드는 개발자가 되고 싶습니다. AI.. 사람들이 쓰고 생활이 더 편리해지거나 즐거워져야 진정한 기술로써 의미가 있다고 생각해요. 이번 해커톤 하면서 너무 즐거웠습니다. 진행하면서 배워야 할 것들이 더 많아진 기분이라 너무 좋고요, 아직 갈 길이 한참 멀지만 그래도 즐겁습니다. AI 하시는 분들 모두 너무 대단하고 파이팅입니다. 밥 맛있게먹고 힘냅시다.  
+          </p>
+          <p class="name"><a href="https://github.com/Jungminchae" target="_blank">Minchae Jung</a> / AIFFEL 1st</p>
         </div>
-        <h2 class="major__title">Minchae Jung</h2>
-        <p class="major__description"> 
-          민채님의 기술 스택 적기 또는 역할 등등
-          <br /> 기이수울, 스으태액
-        </p>
+        <img src="{% static 'imgs/JUNG_M.png' %}" alt="people" class="message__avatar">
       </div>
 
-      <div class="major">
-        <div class="major__avatar">
-          <img src="{% static 'imgs/SHIN.png' %}" class="avatar__img">
+      <div class="message">
+        <img src="{% static 'imgs/SHIN_M.jpg' %}" alt="people" class="message__avatar">
+        <div class="message__speech-bubble">
+          <p> 햄버거를 좋아하는 신태양입니다! 아마 여러분들도 AI를 공부하시면서 두려움과 막막함을 느끼며, 깜깜한 터널속을 걷는 느낌이 드실겁니다. 두려워하지 마세요! AI를 공부한다고 모두가 AI Researcher or Engineer가 되라는 법은 없습니다 :) 저 또한, Machine Learning, Deep Learning을 공부하지만, AI 도메인을 활용한 마케팅, 개발자 등 다양한 길을 생각하고 있습니다. 각자 자신의 분야에서 AI를 활용하면 만나서 공유하고 상생해요 :) 
+          </p>
+          <p class="name"><a href="https://github.com/tyshin94" target="_blank">Taeyang Shin</a> / AIFFEL 1st</p>
         </div>
-        <h2 class="major__title">Taeyang Shin</h2>
-        <p class="major__description"> 
-          태양님의 기술 스택 적기 또는 역할 등등
-          <br /> 기이수울, 스으태액
-        </p>
+      </div>
+      
+      <div class="message">
+        <div class="message__speech-bubble">
+          <p>
+            안녕하십니까! AIFOODIE(TEAM 3)의 이재호입니다! 늘 노트북을 들고다니면 코딩하고 친해질까 항상 가방에 넣고다니긴 하는데 이게 맘같지가 않네요.. 앞으로 계속해서 성장해서 꼭 저를 아시는 분들이 저를 자랑처럼 '어! 나 이 사람아는데??' 말이 나오게 해드리겠습니다 :) 이번 해커톤을 하면서 팀원들과 함께 협업이란 이런 것이구나를 알게 되었고 제가 배웠던 기술들을 활용해서 이런 결과물을 만들었다는게 상당히 자랑스럽네요! 마지막으로... 여러분께는 사실 비밀이였는데 저.. 장비충 맞는것 같아요...
+          </p>
+          <p class="name"><a href="https://github.com/ljh415" target="_blank">Jaeho Lee</a> / AIFFEL 1st</p>
+        </div>
+        <img src="{% static 'imgs/LEE_M.png' %}" alt="people" class="message__avatar">
       </div>
 
-      <div class="major">
-        <div class="major__avatar">
-          <img src="{% static 'imgs/LEE.png' %}" class="avatar__img">
+      <div class="message">
+        <img src="{% static 'imgs/BYUN_M.jpg' %}" alt="people" class="message__avatar">
+        <div class="message__speech-bubble">
+          <p>
+            안녕하세요 딥러닝으로 세상을 바꾸는 도깨비 방망이를 만들고 싶은 Deepdog입니다. 자그만 컴퓨터 화면 속에서 코딩으로 세상을 바꿀 수 있다는게 저 스스로도 믿기지 않지만, 이미 인공지능이 세상의 많은 것들을 바꾸었고 앞으로도 그럴 것이라 생각합니다.            
+          </p>
+          <p class="name"><a href="https://github.com/hybyun0121" target="_blank">Hoyoon Byun</a> / AIFFEL 1st</p>
         </div>
-        <h2 class="major__title">Jaeho Lee</h2>
-        <p class="major__description"> 
-          재호님의 기술 스택 적기 또는 역할 등등
-          <br /> 기이수울, 스으태액
-        </p>
       </div>
-
-      <div class="major">
-        <div class="major__avatar">
-          <img src="{% static 'imgs/BYUN.png' %}" class="avatar__img">
-        </div>
-        <h2 class="major__title">Hoyoon Byun</h2>
-        <p class="major__description"> 
-          호윤님의 기술 스택 적기 또는 역할 등등
-          <br /> 기이수울, 스으태액
-        </p>
-      </div>
-
+      
     </div>
+  </div>
+</section>
 
-    <div class="about__record">
-      <div class="record">
-        <img src="{% static 'imgs/medal.png' %}" alt="1st Hackathon" class="record__logo "width="40" height="40">
-        <div class="record__description">
-          AIFFEL first Hackathon 1st place
-        </div>
-      </div>
-      <div class="record">
-        <img src="{ static 'imgs/startup.png'}" alt="Batch 18th final" class="record__logo" width="40" height="40">
-        <div class="record__description">
-          Startup Accelerator Primer Batch 18th final
-        </div>
-      </div>
-    </div>
-  </section>
+
+<!-- Map API-->
+<style>
+  .customoverlay {position:relative;bottom:85px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left;}
+  .customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
+  .customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: #d95050;background: #d95050 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;}
+  .customoverlay .title {display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:14px;font-weight:bold;}
+  .customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+</style>
+
+<section id="modulabmap" class="section">
+  <h1>MODULAS_AIFFEL Gangnam Campus</h1>
+  <div id="map" style="width:80%; height:700px; margin:50px auto 100px; z-index: 0"></div>
+</section>
+
+<script>
+  var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+          center: new kakao.maps.LatLng(37.49481861560641, 127.03620549826958), // 지도의 중심좌표
+          level: 4 // 지도의 확대 레벨
+      };
   
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <div class="section__container">
-      <h1>Skills</h1>
-      <h2>Skill & Attributes</h2>
-      <p>
-        He majored in Information Statistics and studied artificial intelligence after graduation. I learned the front-end based on AI knowledge, and it is easy to collaborate with my knowledge in AI field. I like to systematically set and achieve specific goals and plans. I often face people, so I prefer to collaborate as a team through communication skills.
-      </br> 어떤 말 쓸지 생각해보자구
-      </p>
-      <div class="skillset">
-        <div class="skillset__left">
-          <h3 class="skillset__title">Classification Models Accuracy</h3>
-          
-          <div class="skill">
-            <div class="skill__description">
-              <span>Xception</span>
-              <span>99.54%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value" style="width: 99.54%"></div>
-            </div>
-          </div>
+  var map = new kakao.maps.Map(mapContainer, mapOption);
+  
+  var imageSrc = '{% static "logo/modu.png" %}', // 마커이미지의 주소입니다    
+      imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+      imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+  
+  // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+  var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+      markerPosition = new kakao.maps.LatLng(37.49481861560641, 127.03620549826958); // 마커가 표시될 위치입니다
+  
+  // 마커를 생성합니다
+  var marker = new kakao.maps.Marker({
+    position: markerPosition,
+    image: markerImage // 마커이미지 설정 
+  });
+  
+  // 마커가 지도 위에 표시되도록 설정합니다
+  marker.setMap(map);  
+  
+  // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+  var content = '<div class="customoverlay">' +
+      '  <a href="https://map.kakao.com/?map_type=TYPE_MAP&itemId=27498032" target="_blank">' +
+      '    <span class="title">모두의연구소</span>' +
+      '  </a>' +
+      '</div>';
+  
+  // 커스텀 오버레이가 표시될 위치입니다 
+  var position = new kakao.maps.LatLng(37.49481861560641, 127.03620549826958);  
+  
+  // 커스텀 오버레이를 생성합니다
+  var customOverlay = new kakao.maps.CustomOverlay({
+      map: map,
+      position: position,
+      content: content,
+      yAnchor: 1 
+  });
+</script>
 
-          <div class="skill">
-            <div class="skill__description">
-              <span>EfficientNet</span>
-              <span>98.81%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value" style="width: 98.81%"></div>
-            </div>
-          </div>
-        
-          <div class="skill">
-            <div class="skill__description">
-              <span>Inception</span>
-              <span>98.49%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value" style="width: 98.49%"></div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="skill__description">
-              <span>ResNet</span>
-              <span>98.38%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value" style="width: 98.38%"></div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="skill__description">
-              <span>DenseNet</span>
-              <span>95.08%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value" style="width: 95.08%"></div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="skill__description">
-              <span>MobileNet</span>
-              <span>63.05%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value" style="width: 63.05%"></div>
-            </div>
-          </div>
-
-          <div class="skill">
-            <div class="skill__description">
-              <span>NASNet</span>
-              <span>15.81%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value" style="width: 15.81%"></div>
-            </div>
-          </div>
-          
-          <div class="skill">
-            <div class="skill__description">
-              <span>VGG</span>
-              <span>5.27%</span>
-            </div>
-            <div class="skill__bar">
-              <div class="skill__value" style="width: 5.27%"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skillset__right">
-          <div class="tools">
-            <h3 class="skillset__title">Type of development</h3>
-            <ul class="tools__list">
-              <li><span>Front-End</span></li>
-              <li><span>Back-End</span></li>
-              <li><span>Amazon Web Services</span></li>
-              <li><span>Machine Learning</span></li>
-              <li><span>Deep Learning</span></li>
-            </ul>
-          </div>
-          
-          <div class="etc">
-            <h3 class="skillset__title">Etc</h3>
-            <ul class="etc__list">
-              <li><span>Git</span></li>
-              <li><span>Github</span></li>
-              <li><span>Google Colab</span></li>
-              <li><span>Jupyter notebook</span></li>
-              <li><span>VSCode</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>  
-    </div>
-  </section>
-
-  <!-- Presentation -->
-  <seciton id="Presentation" class="section">
-    <div class="section__container">
-      <h1>Presentation</h1>
-      <h2>TOPIC: FOOD Classification</h2>
-      <iframe class="ppt" src="https://onedrive.live.com/embed?cid=3D72AC0BD860DA71&amp;resid=3D72AC0BD860DA71%21387&amp;authkey=AOlK2rH_OrzKhrA&amp;em=2&amp;wdAr=1.7777777777777777" width="100%" height="793px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
-      <!-- <iframe class= "ppt" src="{% static 'ppt.pptx' %}" width="100%" height="793px" frameborder="0">포함된 <a target="_blank" href="https://office.com">Microsoft Office</a> 프레젠테이션, 제공: <a target="_blank" href="https://office.com/webapps">Office</a>
-      </iframe> -->
-      <!-- <iframe class= "ppt" src="https://yonsei-my.sharepoint.com/personal/tyshin94_o365_yonsei_ac_kr/_layouts/15/Doc.aspx?sourcedoc={702b2034-44e3-4398-9c33-017cb0dac9c5}&amp;action=embedview&amp;wdAr=1.3333333333333333" width="100%" height="793px" frameborder="0">포함된 <a target="_blank" href="https://office.com">Microsoft Office</a> 프레젠테이션, 제공: <a target="_blank" href="https://office.com/webapps">Office</a>
-      </iframe> -->
-    </div>  
-  </seciton>
-
-  <!-- Message-->
-  <section id="messages" class="section">
-    <div class="section__container">
-      <h1>AIFOODIE Member Message</h1>
-      <h3>See what they say about</h3>
-      <div class="messages">
-        <div class="message">
-          <img src="{% static '/imgs/KIM.png' %}" alt="people" class="message__avatar">
-          <div class="message__speech-bubble">
-            <p>
-              우리가 하고 싶은 말을 적어보쟈구 / 우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /
-            </p>
-            <p class="name"><a href="https://github.com/YesicaKim">Yunkyung Kim</a> / AIFFEL 1st</p>
-          </div>
-        </div>
-        
-        <div class="message">
-          <div class="message__speech-bubble">
-            <p>
-              우리가 하고 싶은 말을 적어보쟈구 / 우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /            </p>
-            <p class="name"><a href="https://github.com/Jungminchae">Minchae Jung</a> / AIFFEL 1st</p>
-          </div>
-          <img src="{% static '/imgs/JUNG.png' %}" alt="people" class="message__avatar">
-        </div>
-
-        <div class="message">
-          <img src="{% static '/imgs/SHIN.png' %}" alt="people" class="message__avatar">
-          <div class="message__speech-bubble">
-            <p>
-              우리가 하고 싶은 말을 적어보쟈구 / 우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /            </p>
-            <p class="name"><a href="https://github.com/tyshin94">Taeyang Shin</a> / AIFFEL 1st</p>
-          </div>
-        </div>
-        
-        <div class="message">
-          <div class="message__speech-bubble">
-            <p>
-              우리가 하고 싶은 말을 적어보쟈구 / 우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /            </p>
-            <p class="name"><a href="https://github.com/ljh415">Jaeho Lee</a> / AIFFEL 1st</p>
-          </div>
-          <img src="{% static '/imgs/LEE.png' %}" alt="people" class="message__avatar">
-        </div>
-
-        <div class="message">
-          <img src="{% /imgs/BYUN.png %}" alt="people" class="message__avatar">
-          <div class="message__speech-bubble">
-            <p>
-              우리가 하고 싶은 말을 적어보쟈구 / 우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /우리가 하고 싶은 말을 적어보쟈구 /            </p>
-            <p class="name"><a href="https://github.com/hybyun0121">Hoyoon Byun</a> / AIFFEL 1st</p>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact-->
-  <section id="contact" class="section">
-      <h1 class="contact__title">Contact</h1>
-      <h2 class="contact__email">https://github.com/Development-On-Saturday</h2>
-      <div class="contact__links">
-        <a href="https://github.com/Development-On-Saturday" target="_blank">
-          <i class="fa fa-github"></i>
-        </a>
-      </div>
-      <p class="contact__rights">
-        Copyright ⓒ 2020 AIFFEL_FOODIE. All rights reserved.
-      </p>
-  </section>
-</body>
-</html>
+      <!-- Arrow up -->
+  <button class="arrow-up">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+{% endblock %}

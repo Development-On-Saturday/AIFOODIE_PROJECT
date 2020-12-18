@@ -30,13 +30,8 @@ ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
-PROJECT_APPS = [
-    "users.apps.UsersConfig",
-    "foods.apps.FoodsConfig",
-    "core.apps.CoreConfig",
-]
+PROJECT_APPS = ["users.apps.UsersConfig", "foods.apps.FoodsConfig", "photos.apps.PhotosConfig"]
 
-THIRD_PARTY_APPS = ["rest_framework"]
 
 INSTALLED_APPS = (
     [
@@ -48,7 +43,6 @@ INSTALLED_APPS = (
         "django.contrib.staticfiles",
     ]
     + PROJECT_APPS
-    + THIRD_PARTY_APPS
 )
 
 
@@ -61,7 +55,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-# "django.middleware.clickjacking.XFrameOptionsMiddleware",
 
 ROOT_URLCONF = "config.urls"
 
@@ -130,4 +123,8 @@ STATIC_URL = "/static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 AUTH_USER_MODEL = "users.User"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
+
+MEDIA_URL = "/media/"
 

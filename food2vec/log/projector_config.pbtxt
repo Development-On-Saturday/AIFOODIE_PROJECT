@@ -1,0 +1,9 @@
+embeddings {
+  tensor_name: "pca:0"
+  sprite {
+    image_path: "/home/aiffel0042/DOS/food2vec/log/sprite.png"
+    single_image_dim: 60
+    single_image_dim: 60
+  }
+  tensor_path: "/home/aiffel0042/DOS/food2vec/log/vector (1).tsv"
+}

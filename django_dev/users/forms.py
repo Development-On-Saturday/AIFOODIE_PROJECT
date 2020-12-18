@@ -4,12 +4,13 @@ from . import models
 
 class RegisterForm(forms.ModelForm):
 
+    email = forms.EmailField(label="email")
     password = forms.CharField(label='password', widget=forms.PasswordInput)
     confirm_password = forms.CharField(label='confirm_password', widget=forms.PasswordInput)
 
     class Meta:
         model = models.User
-        fields = ['username', 'first_name', 'last_name', 'email']
+        fields = ['email']
 
     def clean_confirm_password(self):
         cleaned_data = self.cleaned_data
@@ -17,6 +18,14 @@ class RegisterForm(forms.ModelForm):
             raise forms.ValidationError("Password does not match")
 
         return cleaned_data['confirm_password']
+    
+    def save(self, *args, **kwargs):
+        user = super().save(commit=False)
+        email = self.cleaned_data.get("email")
+        password = self.cleaned_data.get("password")
+        user.username = email
+        user.set_password(password)
+        user.save()
 
 
 class LoginForm(forms.Form):
