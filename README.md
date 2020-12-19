@@ -6,4 +6,4 @@
 
 #### **link**
 
-https://storage.googleapis.com/3rd_hackathon/index.html
+https://aifoodieheroku.herokuapp.com/
