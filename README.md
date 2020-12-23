@@ -1,8 +1,9 @@
 # 음식 이미지 인식, 분류 연구 및 MLOps 퍼블리싱 프로젝트 (AIFOODIE)
 
-[Web🌐]([https://aifoodieheroku.herokuapp.com/](https://aifoodieheroku.herokuapp.com/))
+[Web🌐](https://aifoodieheroku.herokuapp.com/)
 
-[Demo Video▶️]([https://www.youtube.com/watch?v=bmClZ8x1qGQ&feature=youtu.be](https://www.youtube.com/watch?v=bmClZ8x1qGQ&feature=youtu.be))
+[Demo Video ![youtube](https://user-images.githubusercontent.com/48716219/102975581-a77c5200-4543-11eb-893b-45c19273e964.png) 
+](https://youtu.be/buMXyjiqjrk)
 
 ## 프로젝트 요약
 
@@ -14,15 +15,18 @@
 
 - 구성원 (옆에는 깃허브 아이콘, 블로그 아이콘 등으로 버튼하나씩 만들기)
 
-    김윤경(팀 리딩)
+    김윤경(팀 리딩) [![GitHub-Mark-32px](https://user-images.githubusercontent.com/48716219/102974622-31c3b680-4542-11eb-815d-70efcdeb2e75.png)](https://github.com/YesicaKim)
 
-    신태양(프론트엔드)
 
-    정민채(MLOps, 백엔드)
+    신태양(프론트엔드)[![GitHub-Mark-32px](https://user-images.githubusercontent.com/48716219/102974622-31c3b680-4542-11eb-815d-70efcdeb2e75.png)](https://github.com/tyshin94) [![nb30](https://user-images.githubusercontent.com/48716219/102975150-f37ac700-4542-11eb-9606-9414ed89f0de.png)](https://blog.naver.com/tyshin94)
 
-    변호윤(Deep Learning)
 
-    이재호(Deep Learning)
+    정민채(MLOps, 백엔드)[![GitHub-Mark-32px](https://user-images.githubusercontent.com/48716219/102974622-31c3b680-4542-11eb-815d-70efcdeb2e75.png)](https://github.com/Jungminchae)
+
+    변호윤(Deep Learning)[![GitHub-Mark-32px](https://user-images.githubusercontent.com/48716219/102974622-31c3b680-4542-11eb-815d-70efcdeb2e75.png)](https://github.com/hybyun0121)
+
+    이재호(Deep Learning)[![GitHub-Mark-32px](https://user-images.githubusercontent.com/48716219/102974622-31c3b680-4542-11eb-815d-70efcdeb2e75.png)](https://github.com/ljh415) [![nb30](https://user-images.githubusercontent.com/48716219/102975150-f37ac700-4542-11eb-9606-9414ed89f0de.png)](https://blog.naver.com/ab415)
+
 
 - 사용한 데이터 : [AI Hub 한식 이미지데이터베이스](https://www.aihub.or.kr/aidata/130)
 
