@@ -104,12 +104,13 @@ $ python run.py -r True
 ## Code Details
 <details>
     <summary> Click to toggle contents of details </summary>
-- `./Classification_proj`
+    
+- ```./Classification_proj```
 
     - ```/notebooks``` : Notebook 파일
     - ```/food_30``` : python 파일
 
-- `./django_dev`
+- ```./django_dev```
     
     - 로컬 개발용 코드 [배포용 코드는 따로 저장]
     - ```/core```
