@@ -1,5 +1,11 @@
 # 음식 이미지 인식, 분류 연구 및 MLOps 퍼블리싱 프로젝트 (AIFOODIE)
 
+## Screen Shot
+![AIFOODIE](https://user-images.githubusercontent.com/48716219/102978823-76eae700-4548-11eb-920a-6085e040c702.png)
+![screenshot](https://user-images.githubusercontent.com/48716219/102978652-2d020100-4548-11eb-88ea-6ef64c5f1295.jpg)
+
+
+
 [Web🌐](https://aifoodieheroku.herokuapp.com/)
 
 [Demo Video ![youtube](https://user-images.githubusercontent.com/48716219/102975581-a77c5200-4543-11eb-893b-45c19273e964.png) 
@@ -7,7 +13,6 @@
 
 ## 프로젝트 요약
 
----
 
 이 프로젝트는 모두의 연구소에서 주관하는 인공지능 혁신학교 AIFFEL의 3조에서 수행한 마지막 해커톤 프로젝트 입니다.
 
@@ -54,7 +59,6 @@
 
 ## 프로젝트 기간
 
----
 
 - 2020.09.17 ~ 2020.12.21 (3개월)
 
@@ -62,7 +66,6 @@
 
 ## 사용한 기술 스택
 
----
 
 - Git
 - Python
@@ -74,7 +77,6 @@
 
 ## 실행방법
 
----
 
 > 가상환경을 새로 만드시고, 새로운 가상환경에서 실행해 주세요
 
@@ -100,9 +102,8 @@ $ python run.py -r True
 
 
 ## Code Details
-
----
-
+<details>
+    <summary> Click to toggle contents of details </summary>
 - `./Classification_proj`
 
     - ```/notebooks``` : Notebook 파일
@@ -145,3 +146,4 @@ $ python run.py -r True
 - `./reports`
 
     발표자료 보관
+</details>
