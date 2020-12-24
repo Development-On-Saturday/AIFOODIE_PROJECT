@@ -20,7 +20,8 @@
 
 - 구성원 (옆에는 깃허브 아이콘, 블로그 아이콘 등으로 버튼하나씩 만들기)
 
-    김윤경(팀 리딩) [![GitHub-Mark-32px](https://user-images.githubusercontent.com/48716219/102974622-31c3b680-4542-11eb-815d-70efcdeb2e75.png)](https://github.com/YesicaKim)
+    김윤경(팀 리딩) [![GitHub-Mark-32px](https://user-images.githubusercontent.com/48716219/102974622-31c3b680-4542-11eb-815d-70efcdeb2e75.png)](https://github.com/YesicaKim) [![nb30](https://user-images.githubusercontent.com/48716219/102975150-f37ac700-4542-11eb-9606-9414ed89f0de.png)](https://yesicakim.github.io/) [![linkedin](https://user-images.githubusercontent.com/48716219/103057626-60459e00-45e3-11eb-9871-5be00fd88137.png)](https://www.linkedin.com/in/yoonkyungkim/)
+
 
 
     신태양(프론트엔드)[![GitHub-Mark-32px](https://user-images.githubusercontent.com/48716219/102974622-31c3b680-4542-11eb-815d-70efcdeb2e75.png)](https://github.com/tyshin94) [![nb30](https://user-images.githubusercontent.com/48716219/102975150-f37ac700-4542-11eb-9606-9414ed89f0de.png)](https://blog.naver.com/tyshin94)
