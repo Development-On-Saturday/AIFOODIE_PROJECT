@@ -6,7 +6,7 @@
 
 
 
-[Web🌐](https://aifoodieheroku.herokuapp.com/)
+Web🌐 - Server 닫음
 
 [Demo Video ![youtube](https://user-images.githubusercontent.com/48716219/102975581-a77c5200-4543-11eb-893b-45c19273e964.png) 
 ](https://youtu.be/buMXyjiqjrk)
